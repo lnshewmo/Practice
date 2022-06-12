@@ -101,4 +101,24 @@ voting_data = [{"county":"Arapahoe", "registered voters": 422829},
 for counties_dict in range(len(voting_data)):
     print(voting_data[counties_dict]["registered voters"])
 
+# get KEY then VALUE from a list of dictionaries using VALUES() and nested FOR
+voting_data = [{"county":"Arapahoe", "registered voters": 422829},
+                {"county":"Denver", "registered voters": 463353}, 
+                {"county":"Jefferson", "registered voters": 432438}]
+for counties_dict in voting_data:
+    for voters in counties_dict.values():
+        print(voters)
 
+# get KEY only from a list of dictionaries
+voting_data = [{"county":"Arapahoe", "registered voters": 422829},
+                {"county":"Denver", "registered voters": 463353}, 
+                {"county":"Jefferson", "registered voters": 432438}]
+for counties_dict in voting_data:
+    print(counties_dict["county"])
+
+# get VALUE only from a list of dictionaries
+voting_data = [{"county":"Arapahoe", "registered voters": 422829},
+                {"county":"Denver", "registered voters": 463353}, 
+                {"county":"Jefferson", "registered voters": 432438}]
+for counties_dict in voting_data:
+    print(counties_dict["registered voters"])
