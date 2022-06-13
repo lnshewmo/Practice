@@ -28,6 +28,15 @@ message_to_candidate = (
     f"You received {candidate_votes/total_votes * 100}% of the total votes.") 
 print(message_to_candidate)
 
+# same code but formatting the percentage (floating point decimal)
+candidate_votes = int(input("How many votes did the candidate get in the election?"))
+total_votes = int(input("How many total votes in the election"))
+message_to_candidate = (
+    f"You received {candidate_votes} votes. "
+    f"There were {total_votes} total votes. "
+    f"You received {candidate_votes/total_votes * 100:.2f}% of the total votes.") 
+print(message_to_candidate)
+
 # skill drill 3.2.11a
 counties_dict = {"Arapahoe": 422829, "Denver": 463353, "Jefferson": 432438}
 for county,voters in counties_dict.items(): # defines variables
